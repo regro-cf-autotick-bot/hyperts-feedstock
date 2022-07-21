@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/DataCanvasIO/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 0c93f52902ca8ff71599a54594b8077c428a636f1dbe1189c60c3d59f17a5283
+  sha256: 792f4011feadb838f03f664278ec8333eb875183f993e69ff6a0578df65a0351
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
