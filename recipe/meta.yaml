@@ -1,5 +1,5 @@
 {% set name = "HyperTS" %}
-{% set version = "0.1.4" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/DataCanvasIO/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 792f4011feadb838f03f664278ec8333eb875183f993e69ff6a0578df65a0351
+  sha256: 39ce78d6c1831bcb1c9ce4fd891585aa527e1342acd8c020239cd8696a44cf9b
 
 build:
   noarch: python
-  number: 1
+  number: 3
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -22,14 +22,17 @@ requirements:
     - python >=3.6
     - sktime >=0.8.1
     - hypernets >=0.2.5.1, <0.2.6
-    - prophet ==1.0.1
+    - prophet >=1.0.1
     - statsmodels >=0.12.1
     - numpy >=1.16.5, <1.22 # remove upper bound when the issue is fixed. 'https://github.com/conda-forge/sktime-feedstock/issues/31
     - pandas >=0.25.3
     - scikit-learn >=0.22.1
-    - scipy <1.8.0 # remove this line when the issue is fixed. https://github.com/conda-forge/sktime-feedstock/issues/31
+    # - scipy <1.8.0 # remove this line when the issue is fixed. https://github.com/conda-forge/sktime-feedstock/issues/31
+    - scipy
   run_constrained:
     - tensorflow >=2.0
+    - scipy <1.8.0
+    - arviz <=0.12.1
 
 test:
   imports:
