@@ -32,6 +32,7 @@ requirements:
   run_constrained:
     - tensorflow >=2.0
     - scipy <1.8.0
+    - arviz <=0.12.1
 
 test:
   imports:
