@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/DataCanvasIO/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: a9988034c1722bdeda3d029f84178cab9470e628033af1212c3a59821cc32793
+  sha256: d7b867551bb35aaf3cc562e633973b2f5cb6e9907ea2b0181a07e32da230cc32
 
 build:
   noarch: python
@@ -16,10 +16,10 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
   run:
-    - python >=3.6
+    - python >=3.7
     - sktime >=0.8.1
     - hypernets >=0.3.0
     - prophet >=1.0.1
@@ -30,7 +30,7 @@ requirements:
     # - scipy <1.8.0 # remove this line when the issue is fixed. https://github.com/conda-forge/sktime-feedstock/issues/31
     - scipy
   run_constrained:
-    - tensorflow >=2.0, <2.5.0
+    - tensorflow >=2.0, <=2.10
     - scipy <1.8.0
     - arviz <=0.12.1
 
