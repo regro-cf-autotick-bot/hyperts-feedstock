@@ -1,5 +1,5 @@
 {% set name = "HyperTS" %}
-{% set version = "0.2.1" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/DataCanvasIO/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: d7b867551bb35aaf3cc562e633973b2f5cb6e9907ea2b0181a07e32da230cc32
+  sha256: aa509cc9296de10444fd830bfe998bb42b25d28adbc1e685be778802fe840717
 
 build:
   noarch: python
@@ -20,7 +20,7 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - sktime >=0.8.1
+    - sktime >=0.8.1, <=0.17.2
     - hypernets >=0.3.0
     - prophet >=1.0.1
     - statsmodels >=0.12.1
