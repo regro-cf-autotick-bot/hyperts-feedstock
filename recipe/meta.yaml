@@ -1,5 +1,5 @@
 {% set name = "HyperTS" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/DataCanvasIO/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 39ce78d6c1831bcb1c9ce4fd891585aa527e1342acd8c020239cd8696a44cf9b
+  sha256: a9988034c1722bdeda3d029f84178cab9470e628033af1212c3a59821cc32793
 
 build:
   noarch: python
-  number: 3
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
