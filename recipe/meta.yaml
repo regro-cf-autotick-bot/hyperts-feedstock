@@ -11,15 +11,15 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - hypernets >=0.3.0
     - prophet >=1.0.1
     - statsmodels >=0.12.1
@@ -39,6 +39,7 @@ test:
     - hyperts.tests
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
